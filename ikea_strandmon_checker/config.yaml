@@ -1,13 +1,13 @@
 name: "Ikea Strandmon Checker"
 description: "Addon for checking Strandmon price at Ikea"
-version: "1.0.11"
+version: "1.0.12"
 slug: "ikea_strandmon_checker"
-init: true
+init: false
 arch:
   - aarch64
   - amd64
   - armhf
   - armv7
   - i386
-homeassistant_api: true
-hassio_api: true
+#homeassistant_api: true
+#hassio_api: true
