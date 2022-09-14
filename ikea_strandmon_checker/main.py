@@ -5,13 +5,14 @@ from bs4 import BeautifulSoup
 import json
 import os
 
+token = os.getenv("SUPERVISOR_TOKEN")
+
 s = requests.Session()
 
 def send_entity_state(price):
-    token = os.getenv("SUPERVISOR_TOKEN")
-    print(token)
+    print("TOKEN: " + token)
     ha_headers = {
-        "Authorization": "Bearer " + token,
+        "Authorization": "Bearer {}".format(token),
         "Content-Type": "application/json"
     }
     ha_payload = {
