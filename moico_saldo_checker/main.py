@@ -26,7 +26,7 @@ def send_entity_state(saldo):
 
 def load_options():
     global options
-    f = open("options.json", "r")
+    f = open("/data/options.json", "r")
     options = json.loads(f.read())
     f.close()
 
