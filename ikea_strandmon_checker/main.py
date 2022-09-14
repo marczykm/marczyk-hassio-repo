@@ -8,8 +8,8 @@ import os
 s = requests.Session()
 
 def send_entity_state(price):
-    token = os.environ["SUPERVISOR_TOKEN"]
-    print(os.environ["SUPERVISOR_TOKEN"])
+    token = os.getenv["SUPERVISOR_TOKEN"]
+    print(token)
     ha_headers = {
         "Authorization": "Bearer " + token,
         "Content-Type": "application/json"
