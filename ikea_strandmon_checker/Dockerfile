@@ -1,6 +1,6 @@
 ARG BUILD_FROM=ghcr.io/hassio-addons/base:12.2.2
-#FROM $BUILD_FROM
-FROM ghcr.io/hassio-addons/base:12.2.2
+FROM $BUILD_FROM
+#FROM ghcr.io/hassio-addons/base:12.2.2
 
 RUN \
   apk add --no-cache \
