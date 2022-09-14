@@ -1,7 +1,7 @@
-name: "Moico Saldo Checker"
-description: "Addon for checking saldo at Moico eBOK"
-version: "1.0.8"
-slug: "moico_saldo_checker"
+name: "SM Piast Saldo Checker"
+description: "Addon for checking saldo at SM Piast eBOK"
+version: "1.0.2"
+slug: "smpiast_saldo_checker"
 init: false
 arch:
   - aarch64
