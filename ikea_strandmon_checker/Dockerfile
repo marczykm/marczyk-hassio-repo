@@ -12,4 +12,6 @@ WORKDIR /
 
 RUN pip install -r requirements.txt
 
-CMD [ "/usr/bin/python3", "/main.py" ]
+RUN chmod +x /main.py
+
+CMD [ "python3", "main.py" ]
