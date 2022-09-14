@@ -62,6 +62,7 @@ def login_():
         'p_json': json.dumps(p_json)
     }
     login = s.post('https://ebok.smpiast.com.pl/ords/wwv_flow.accept', data=payload)
+    print(login.text)
     redirectUrl = login.json()['redirectURL']
     return redirectUrl.replace('110', '24')
 
@@ -71,7 +72,8 @@ def get_saldo():
     saldo_page = s.get('https://ebok.smpiast.com.pl/ords/' + saldo_url)
     p = BeautifulSoup(saldo_page.text, 'html.parser')
     username = p.find_all(attrs={'class': 't-Button-label'})[0].text
-    saldo = float(p.find_all(attrs={'class': 't-Card-desc'})[0].text.split(': ')[1].split(' (')[0].split(' zł')[0]
+    print('https://ebok.smpiast.com.pl/ords/' + saldo_url)
+    saldo = float(p.find_all(attrs={'id': 'N_SALDO'})[0].text.split(': ')[1].split(' zł')[0]
                   .replace(' ', '').replace(',', '.'))
     print(username)
     print(saldo)

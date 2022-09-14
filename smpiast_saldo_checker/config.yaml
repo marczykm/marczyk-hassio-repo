@@ -1,6 +1,6 @@
 name: "SM Piast Saldo Checker"
 description: "Addon for checking saldo at SM Piast eBOK"
-version: "1.0.2"
+version: "1.0.3"
 slug: "smpiast_saldo_checker"
 init: false
 arch:
