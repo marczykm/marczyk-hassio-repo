@@ -1,6 +1,6 @@
 name: "Moico Saldo Checker"
 description: "Addon for checking saldo at Moico eBOK"
-version: "1.0.7"
+version: "1.0.8"
 slug: "moico_saldo_checker"
 init: false
 arch:
