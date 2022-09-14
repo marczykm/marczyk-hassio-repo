@@ -6,10 +6,10 @@ import json
 import os
 
 token = os.getenv("SUPERVISOR_TOKEN")
+print("token: {}".format(token))
 
 s = requests.Session()
 options = {}
-
 
 def send_entity_state(saldo):
     ha_headers = {
