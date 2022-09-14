@@ -4,13 +4,16 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import os
+import logging
+
+log = logging.getLogger("ikea_strandmon_checker")
 
 token = os.getenv("SUPERVISOR_TOKEN")
 
 s = requests.Session()
 
 def send_entity_state(price):
-    print("TOKEN: " + str(token))
+    log.info("TOKEN: " + str(token))
     ha_headers = {
         "Authorization": "Bearer {}".format(token),
         "Content-Type": "application/json"
@@ -19,21 +22,21 @@ def send_entity_state(price):
         "state": price
     }
     ha_response = requests.post("http://supervisor/core/api/states/sensor.ikea_strandmon", json=ha_payload, headers=ha_headers)
-    print(ha_response.status_code)
-    print(ha_response.text)
+    log.info(ha_response.status_code)
+    log.info(ha_response.text)
 
 def get_price():
     global price
     price_page = s.get('https://www.ikea.com/pl/pl/products/844/80359844-compact-fragment.html')
     p = BeautifulSoup(price_page.text, 'html.parser')
     price_str = p.find_all(attrs={'class': 'pip-price__integer'})[0].text
-    print(price_str)
+    log.info(price_str)
     price = float(price_str)
     return price
 
 
 if __name__ == '__main__':
-    print("Addon started")
+    log.info("Addon started")
     while True:
         price = get_price()
         send_entity_state(price)
