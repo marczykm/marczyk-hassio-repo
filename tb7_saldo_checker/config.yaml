@@ -1,6 +1,6 @@
 name: "TB7 Saldo Checker"
 description: "Addon for checking saldo at tb7.pl"
-version: "1.0.0"
+version: "1.0.1"
 slug: "tb7_saldo_checker"
 init: false
 arch:
