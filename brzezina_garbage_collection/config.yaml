@@ -1,6 +1,6 @@
 name: "Brzezina Garbage Collection"
 description: "Addon for checking garbage collection schedule in Brzezina"
-version: "1.0.0"
+version: "1.0.1"
 slug: "brzezina_garbage_collection"
 init: false
 arch:

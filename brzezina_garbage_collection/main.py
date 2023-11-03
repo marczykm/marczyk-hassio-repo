@@ -19,7 +19,7 @@ def send_entity_state(name, days, next_disposal):
             "next_disposal": next_disposal
         }
     }
-    ha_response = requests.post("http://supervisor/core/api/states/sensor.brzezina_garbage_collection_"+name.lower(), json=ha_payload, headers=ha_headers)
+    ha_response = requests.post("http://supervisor/core/api/states/sensor.brzezina_garbage_collection_"+name.lower().replace(' ', ''), json=ha_payload, headers=ha_headers)
     print(ha_response.status_code)
     print(ha_response.text)
 
