@@ -19,12 +19,11 @@ def send_entity_state(name, days, next_disposal):
             "next_disposal": next_disposal
         }
     }
-    ha_response = requests.post("http://supervisor/core/api/states/sensor.brzezina_garbage_collection_"+name.lower().replace(' ', ''), json=ha_payload, headers=ha_headers)
+    ha_response = requests.post("http://supervisor/core/api/states/sensor.brzezina_garbage_collection_"+name.lower().replace(' ', '').replace('ł', 'l'), json=ha_payload, headers=ha_headers)
     print(ha_response.status_code)
     print(ha_response.text)
 
 def get_saldo():
-    global saldo
     api_headers = {
         'Host': 'api.skycms.com.pl',
         'x-skycms-key': '5d0123032115904c9d4ff70522405e60',
@@ -50,11 +49,9 @@ def get_saldo():
         name = k['name']
         next_disposal = k['disposals'][0]
         send_entity_state(name, next_disposal['days'], next_disposal['id'])
-    # return saldo
 
 
 if __name__ == '__main__':
     while True:
         get_saldo()
-        time.sleep(60*60*12)
-        # send_entity_state(saldo)'
+        time.sleep(60*60*8)
