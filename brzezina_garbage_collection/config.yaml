@@ -1,0 +1,12 @@
+name: "Brzezina Garbage Collection"
+description: "Addon for checking garbage collection schedule in Brzezina"
+version: "1.0.0"
+slug: "brzezina_garbage_collection"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+homeassistant_api: true
