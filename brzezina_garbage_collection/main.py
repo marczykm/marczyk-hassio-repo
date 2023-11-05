@@ -25,18 +25,7 @@ def send_entity_state(name, days, next_disposal):
 
 def get_saldo():
     api_headers = {
-        'Host': 'api.skycms.com.pl',
         'x-skycms-key': '5d0123032115904c9d4ff70522405e60',
-        'x-skycms-app-version': '1',
-        'x-loader': 'true',
-        'x-skycms-version': '17.1',
-        'x-skycms-model': 'iPhone',
-        'Accept-Language': 'pl-PL,pl;q=0.9',
-        'x-skycms-push': 'f2qUBTccsE4_ramxsz1n8a:APA91bGwExFb7LiXhGnkNm2KNxDVAGdnO7RnhASgv7266GflEacs9uFysm8cas-xjOvFSktuxxmSgnQUdPKb2YPSzQKCUyR9SP86c_0V2P-9NbwxbxpUYmRPbGI5Xc5m6rfHqGBdn0-3',
-        'User-Agent': 'Mozilla/5.0 (iPhone; CPU OS 17_1 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/17.1 Mobile/10A5355d Safari/8536.25',
-        'Connection': 'keep-alive',
-        'x-skycms-language': '1',
-        'Accept': 'application/json, text/plain, */*',
         'x-skycms-type': 'iOS',
         'x-skycms-device': '04C977DF-F4BB-4541-AEF2-EB2F454CB4D2'
     }
