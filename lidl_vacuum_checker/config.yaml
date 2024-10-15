@@ -1,0 +1,12 @@
+name: "Lidl Vacuum Checker"
+description: "Addon for checking vacuum price at Lidl"
+version: "1.0.0"
+slug: "lidl_vacuum_checker"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+homeassistant_api: true
